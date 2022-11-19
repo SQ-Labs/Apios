@@ -6,7 +6,7 @@
     export let sexe;
     export let socialsecuritynumber;
 </script>
-<a href="/">
+<a href="/pro/profile">
 <div class="patient">
     <p>{lastname.toUpperCase()}</p>
     <p>{firstname.charAt(0).toUpperCase() + firstname.slice(1).toLowerCase()}</p>
