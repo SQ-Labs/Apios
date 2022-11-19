@@ -4,6 +4,68 @@
 </svelte:head>
 
 <script>
+	let age = 0;
+	let weight = 0;
+	let height = 0;
+	let sys = 0;
+	let dia = 0;
+	let chol = 0;
+
+	let cypheredValues = {};
+	let values = {};
+
+	let result = {};
+	let decyphered = {};
+
+	function cypher() {
+		console.log(age, weight, height, sys, dia, chol);
+
+		fetch('http://localhost:5000/cypher?age=' + age + '&weight=' + weight + '&height=' + height + '&sys=' + sys + '&dia=' + dia + '&chol=' + chol)
+			.then(response => response.json())
+			.then(data => {
+				console.log(data);
+				values = data;
+
+				for (const [key, value] of Object.entries(data)) {
+					cypheredValues[key] = value.substr(0, 100) + '...';
+				}
+			});
+	}
+
+
+	function send() {
+		console.log(values);
+
+		fetch('http://localhost:5000/compute', {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json'
+			},
+			body: JSON.stringify(values)
+		})
+			.then(response => response.json())
+			.then(data => {
+				console.log(data);
+				result = data;
+			});
+	}
+
+	function decypher() {
+		console.log(result);
+
+		fetch('http://localhost:5000/decypher_result', {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json'
+			},
+			body: JSON.stringify(result)
+		})
+			.then(response => response.json())
+			.then(data => {
+				console.log(data);
+				decyphered = data;
+			});
+	}
 </script>
 
 <h1>BJARSTAL Georgia</h1>
@@ -41,16 +103,45 @@
 <div class="child_div_2">
 	<div class="text-column">
 		<h2>Donnees</h2>
-		<input type="number" placeholder="Poids" />
-		<input type="number" placeholder="Taille" />
-		<input type="number" placeholder="Pression sanguine systolique" />
-		<input type="number" placeholder="Pression sanguine diastolique" />
-		<input type="number" placeholder="Cholestérol" />
-		<button>Enregistrer</button>
-		<button>Envoyer</button>
+		<label>Age</label>
+		<input bind:value={age} type="number" placeholder="Age" />
+		<label>Poids</label>
+		<input bind:value={weight} type="number" placeholder="Poids" />
+		<label>Taille</label>
+		<input bind:value={height} type="number" placeholder="Taille" />
+		<label>Tension systolique</label>
+		<input bind:value={sys} type="number" placeholder="Pression sanguine systolique" />
+		<label>Tension diastolique</label>
+		<input bind:value={dia} type="number" placeholder="Pression sanguine diastolique" />
+		<label>Cholestérol</label>
+		<input bind:value={chol} type="number" placeholder="Cholestérol" />
+		<button on:click={cypher}>Chiffrer</button>
+		<!-- <button>Envoyer</button> -->
 	</div>
 </div>
 </div>
+
+<pre>
+	<code>
+{JSON.stringify(cypheredValues, null, 2)}
+	</code>
+</pre>
+
+<button on:click={send}>Envoyer</button>
+
+<pre>
+	<code>
+{JSON.stringify(result, null, 2)}
+	</code>
+</pre>
+
+<button on:click={decypher}>Decypher</button>
+
+<pre>
+	<code>
+{JSON.stringify(decyphered, null, 2)}	
+	</code>
+</pre>
 
 <style>
 .parent_div {
