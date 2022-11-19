@@ -74,5 +74,6 @@
     padding: 1rem;
     background-color: white;
     border-radius: 1rem;
+	max-width: 33vw;
 }
 </style>
