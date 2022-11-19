@@ -1,5 +1,5 @@
 <svelte:head>
-	<title>Profile</title>
+	<title>Profil</title>
 	<meta name="description" content="Profil d'un patient" />
 </svelte:head>
 
@@ -24,16 +24,16 @@
 	<a href="/pro/profile/results">
 	<h2>Résultats</h2>
 	</a>
-	<a href="/">
+	<a href="/pro/profile">
 	<h2>Charger des documents</h2>
 	</a>
 	<a href="/pro/profile">
 	<h2>Renseigner des données</h2>
 	</a>
-	<a href="/">
+	<a href="/pro/profile">
 	<h2>Historique</h2>
 	</a>
-	<a href="/">
+	<a href="/pro/profile">
 	<h2>Générer un mot de passe</h2>
 	</a>
 </div>
