@@ -43,6 +43,9 @@ p {
 
 p {
   line-height: 1.5;
+  margin: 0;
+  padding-top: 2px;
+  padding-bottom: 2px;
 }
 
 a {
@@ -66,6 +69,13 @@ h2 {
   color: #001112;
   margin-top: 1vh;
   margin-bottom: 1vh;
+  padding: 0;
+}
+
+h3 {
+  color: #002224;
+  margin-top: 1vh;
+  margin-bottom: 0.2vh;
   padding: 0;
 }
 
