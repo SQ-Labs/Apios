@@ -27,6 +27,9 @@
 	<a href="/">
 	<h2>Historique</h2>
 	</a>
+	<a href="/">
+	<h2>Générer un mot de passe</h2>
+	</a>
 </div>
 
 <div class="child_div_2">
