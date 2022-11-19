@@ -12,7 +12,7 @@
 <div class="child_div_1">
 	<h2>Profil</h2>
 	<p>Nom: BJARSTAL</p>
-	<p>Prenom: Georgia</p>
+	<p>Prénom: Georgia</p>
 	<p>Sexe: Femme</p>
 	<p>Date de naissance: 1999-09-19</p>
 	<p>N secu: X XX XX XX XXX XXX XX</p>
@@ -21,8 +21,14 @@
 	<p>Ville: Paris</p>
 	<p>Telephone: 0123456789</p>
 	<p>Email: georgia.bjarstal@epita.fr</p>
+	<a href="/pro/profile/results">
+	<h2>Résultats</h2>
+	</a>
 	<a href="/">
 	<h2>Charger des documents</h2>
+	</a>
+	<a href="/pro/profile">
+	<h2>Renseigner des données</h2>
 	</a>
 	<a href="/">
 	<h2>Historique</h2>
