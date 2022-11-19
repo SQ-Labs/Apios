@@ -11,7 +11,7 @@ let password = ""
 <div class="text-column">
 	<h1>Patients</h1>
 
-	<input type="number" placeholder="Login" bind:value={num_secu} />
+	<input type="number" placeholder="Numéro de sécurité social" bind:value={num_secu} />
 	<input type="password" placeholder="Mot de passe" bind:value={password} />
 	<a href="patients/ma_fiche">
 		<button>Se Connecter</button>
