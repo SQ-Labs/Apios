@@ -4,12 +4,12 @@
 </svelte:head>
 
 <script>
-	let age = 0;
-	let weight = 0;
-	let height = 0;
-	let sys = 0;
-	let dia = 0;
-	let chol = 0;
+	let age = 39;
+	let weight = 75;
+	let height = 1.75;
+	let sys = 120;
+	let dia = 80;
+	let chol = 200;
 
 	let cypheredValues = {};
 	let values = {};
@@ -19,6 +19,10 @@
 
 	function cypher() {
 		console.log(age, weight, height, sys, dia, chol);
+		values = {};
+		cypheredValues = {};
+		result = {};
+		decyphered = {};
 
 		fetch('http://localhost:5000/cypher?age=' + age + '&weight=' + weight + '&height=' + height + '&sys=' + sys + '&dia=' + dia + '&chol=' + chol)
 			.then(response => response.json())
@@ -35,6 +39,7 @@
 
 	function send() {
 		console.log(values);
+		result = {};
 
 		fetch('http://localhost:5000/compute', {
 			method: 'POST',
@@ -52,6 +57,7 @@
 
 	function decypher() {
 		console.log(result);
+		decyphered = {};
 
 		fetch('http://localhost:5000/decypher_result', {
 			method: 'POST',
