@@ -141,7 +141,7 @@
 	</code>
 </pre>
 
-<button on:click={decypher}>Decypher</button>
+<button on:click={decypher}>Déchiffrer</button>
 
 <pre>
 	<code>

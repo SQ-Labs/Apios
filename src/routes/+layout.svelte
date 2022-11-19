@@ -11,7 +11,7 @@ import './styles.css';
     </main>
 
     <footer>
-        <p>Developé par <a href="https://www.aureleoules.com/" target="_blank" rel="noopener noreferrer">Aurèle</a>, <a href="https://www.georgiabjarstal.com" target="_blank" rel="noopener noreferrer">Georgia</a>, <a href="https://github.com/Yamidea" target="_blank" rel="noopener noreferrer">Marie</a> et <a href="https://www.stephanegelibert.com" target="_blank" rel="noopener noreferrer">Stéphane</a> dans le cadre d'un hackathon <a href="https://www.gottagohack.fr/" target="_blank" rel="noopener noreferrer">GGH</a></p>
+        <p>Developpé par <a href="https://www.aureleoules.com/" target="_blank" rel="noopener noreferrer">Aurèle</a>, <a href="https://www.georgiabjarstal.com" target="_blank" rel="noopener noreferrer">Georgia</a>, <a href="https://github.com/Yamidea" target="_blank" rel="noopener noreferrer">Marie</a> et <a href="https://www.stephanegelibert.com" target="_blank" rel="noopener noreferrer">Stéphane</a> dans le cadre d'un hackathon <a href="https://www.gottagohack.fr/" target="_blank" rel="noopener noreferrer">GGH</a></p>
     </footer>
 </div>
 
