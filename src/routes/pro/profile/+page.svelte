@@ -143,6 +143,7 @@
 
 <button on:click={decypher}>Déchiffrer</button>
 
+<label>Probabilite de maladie cardiaque</label>
 <pre>
 	<code>
 {JSON.stringify(decyphered, null, 2)}	
