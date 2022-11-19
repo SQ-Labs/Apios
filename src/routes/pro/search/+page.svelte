@@ -4,15 +4,15 @@
 </svelte:head>
 
 <script>
+// @ts-nocheck
+
+import Results from './Results.svelte';
 import {
     onMount
 } from 'svelte';
 
 let now = new Date(),
     month, day, year;
-/**
- * @type {string}
- */
 let dateString;
 
 onMount(() => {
@@ -38,14 +38,13 @@ let questions = [{
     },
 ];
 
-/**
- * @type {{ id: any; text: any; }}
- */
 let selected;
 let answer = '';
 
-function handleSubmit() {
-    alert(`answered question ${selected.id} (${selected.text}) with "${answer}"`);
+let clicked = false;
+
+function displayResults() {
+    clicked = true;
 }
 </script>
 
@@ -69,7 +68,8 @@ function handleSubmit() {
 {/each}
 	</select>
 
-<a href="search/results">
-	<button>Rechercher</button>
-	</a>
+<button on:click={displayResults}>Rechercher</button>
+    {#if clicked}
+    <Results />
+    {/if}
 </div>
