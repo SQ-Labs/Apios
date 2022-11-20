@@ -7,7 +7,7 @@
 	let age = 39;
 	let weight = 75;
 	let height = 1.75;
-	let sys = 120;
+	let sys = 80;
 	let dia = 80;
 	let chol = 200;
 
@@ -143,6 +143,7 @@
 
 <button on:click={decypher}>Déchiffrer</button>
 
+<label>Probabilite de maladie cardiaque</label>
 <pre>
 	<code>
 {JSON.stringify(decyphered, null, 2)}	
